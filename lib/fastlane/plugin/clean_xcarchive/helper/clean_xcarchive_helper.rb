@@ -8,8 +8,13 @@ module Fastlane
       # class methods that you define here become available in your action
       # as `Helper::CleanXcarchiveHelper.your_method`
       #
-      def self.show_message
-        UI.message("Hello from the clean_xcarchive plugin helper!")
+      def self.archive_root
+        File.expand_path("~/Library/Developer/Xcode/Archives/")
+      end
+
+      def self.is_default_archive_dir?(archive_dir)
+        re = Regexp.new("\^#{archive_root}\/\\d{4}-\\d{2}-\\d{2}\$")
+        re.match(archive_dir) != nil
       end
     end
   end
