@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.author        = 'matsuda'
   spec.email         = 'kosukematsuda@gmail.com'
 
-  spec.summary       = 'Delete the archive created at build'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-clean_xcarchive"
+  spec.summary       = 'Fastlane plugin to remove xcarchive created when build & archive'
+  spec.homepage      = "https://github.com/matsuda/fastlane-plugin-clean_xcarchive"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
